@@ -2,10 +2,10 @@
 
 
 
-sudo apt-get install --print-uris --yes xfce4 | grep ^\' | cut -d\' -f2 > xfce-packages.txt
+sudo apt-get install --print-uris --yes xfce4 | grep ^\' | cut -d\' -f2 > xfce4-packages.txt
 
 mkdir dependencies
 
 cd dependencies
 
-wget -i ../xfce-packages.txt
+wget -i ../xfce4-packages.txt
