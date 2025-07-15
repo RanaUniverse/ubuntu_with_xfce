@@ -74,3 +74,26 @@ cd dependencies_systemload
 wget -i ../systemload-packages.txt
 ```
 
+
+This below is for screenshot taken in the xfce.
+### sudo apt install xfce4-screenshooter
+```
+sudo apt-get install --print-uris --yes xfce4-screenshooter | grep ^\' | cut -d\' -f2 > screenshooter-urls.txt
+
+mkdir dependencies_screenshooter
+cd dependencies_screenshooter
+
+wget -i ../screenshooter-urls.txt
+```
+After the screenshoter package will install, then i will assign some script with shortcut key with this.
+
+`screenshot_active_windows.sh screenshot_rectangle_selection.sh screenshot_fullscreen.sh` has been saved in ~/.apps_and_softwares place and it will assign with shortcut keys.
+
+
+
+
+
+
+
+
+
