@@ -49,7 +49,17 @@ cd dependencies_clipman
 wget -i ../clipman-packages.txt
 ``` 
 
+### sudo apt install xfce4-power-manager
 
+```
+sudo apt-get install --print-uris --yes xfce4-power-manager | grep ^\' | cut -d\' -f2 > power-manager-packages.txt
+
+mkdir dependencies_power_manager
+cd dependencies_power_manager
+
+wget -i ../power-manager-packages.txt
+
+```
 
 
 
