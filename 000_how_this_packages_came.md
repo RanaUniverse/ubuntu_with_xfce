@@ -62,6 +62,15 @@ wget -i ../power-manager-packages.txt
 ```
 
 
+### sudo apt install xfce4-systemload-plugin
 
 
+```
+sudo apt-get install --print-uris --yes xfce4-systemload-plugin | grep ^\' | cut -d\' -f2 > systemload-packages.txt
+
+mkdir dependencies_systemload
+cd dependencies_systemload
+
+wget -i ../systemload-packages.txt
+```
 
