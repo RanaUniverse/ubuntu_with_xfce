@@ -31,3 +31,27 @@ cd dependencies_whiskermenu
 
 wget -i ../whiskermenu-packages.txt
 ```
+
+      <property name="button-icon" type="string" value="/home/RANA_UNIVERSE/Pictures/linux_logo.png"/>
+Upper is in the panel
+
+Need to careful to change the username
+
+### sudo apt install xfce4-clipman-plugin
+
+
+```
+sudo apt-get install --print-uris --yes xfce4-clipman-plugin | grep ^\' | cut -d\' -f2 > clipman-packages.txt
+
+mkdir dependencies_clipman
+cd dependencies_clipman
+
+wget -i ../clipman-packages.txt
+``` 
+
+
+
+
+
+
+
