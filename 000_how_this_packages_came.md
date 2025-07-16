@@ -92,6 +92,30 @@ After the screenshoter package will install, then i will assign some script with
 
 
 
+### Now it will have Redshift For Red Color
+` sudo apt install redshift redshift-gtk `
+
+```
+sudo apt-get install --print-uris --yes redshift redshift-gtk | grep ^\' | cut -d\' -f2 > redshift-packages.txt
+
+mkdir dependencies_redshift
+cd dependencies_redshift
+
+wget -i ../redshift-packages.txt
+```
+
+Now i need to install thsi, and then use the terminal shortcut,
+```
+echo "The redshift will install in this machine to control the night light."
+
+# sudo dpkg -i dependencies/*.deb
+sudo apt install ./dependencies/*.deb
+
+./terminal_alias_for_redshift.sh 
+
+echo "The Redshift has been installed Successfully."
+```
+
 
 
 
