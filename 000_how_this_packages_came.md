@@ -191,6 +191,19 @@ echo "in terminal '1' and enter to start the bucklespring manually, and to stop 
 
 
 
+### sudo apt install xfce4-eyes-plugin
+
+
+```
+sudo apt-get install --print-uris --yes xfce4-eyes-plugin | grep ^\' | cut -d\' -f2 > xfce4-eyes-plugin-packages.txt
+
+mkdir dependencies_eyes_plugin
+cd dependencies_eyes_plugin
+
+wget -i ../xfce4-eyes-plugin-packages.txt
+```
+
+
 
 
 
