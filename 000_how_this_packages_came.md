@@ -117,6 +117,80 @@ echo "The Redshift has been installed Successfully."
 ```
 
 
+# Now i will install Bucklespring from the source code.
+
+
+```
+I need to download [zip of bucklespring](https://github.com/zevv/bucklespring)...
+
+sudo apt-get install --print-uris --yes libopenal-dev libalure-dev libxtst-dev pkg-config | grep ^\' | cut -d\' -f2 > bucklespring_packages.txt
+
+
+mkdir dependencies_bucklespring
+cd dependencies_bucklespring
+
+wget -i ../bucklespring_packages.txt
+```
+After this i will install all those.
+Below the build the bucklespring from the source code
+
+```
+
+echo "Creating the directory if it doesn't already exist...🍌"
+
+mkdir -pv ~/.apps_and_softwares
+
+# Check for old bucklespring installation, and unzip is both connected.
+
+echo "Checking any old bucklespring folder inside ~/.apps_and_softwares..."
+
+if [ -d ~/.apps_and_softwares/bucklespring* ]; then
+    echo "Old bucklespring folder found! Removing...🍌"
+    rm -rf ~/.apps_and_softwares/bucklespring*
+    echo "Old bucklespring folder removed 🍌"
+else
+    echo "No previous bucklespring folder found. Fresh installation will proceed...🍌"
+fi
+
+unzip -qq bucklespring*.zip -d ~/.apps_and_softwares/
+
+echo "Bucklespring extraction completed successfully! 🎉"
+
+cd ~/.apps_and_softwares/bucklespring*
+
+make
+
+./buckle
+
+make libinput=1
+
+```
+
+
+
+
+Now i will install those dependencies and then use `installation_script.sh` and then i will use terminal alias.
+
+
+```
+
+echo "For Bucklespring, My own Terminal Alias is Creating Now. -Rana Universe 🍌🍌🍌>"
+
+
+(cat << 'EOF' && cat ~/.bashrc) > ~/.bashrc.tmp && mv ~/.bashrc.tmp ~/.bashrc
+
+# This is for my favourite terminal shortcut to start & stop bucklespring- Rana Universe 🍌🍌🍌
+
+alias 1='nohup bash -c "cd ~/.apps_and_softwares/bucklespring* && ./buckle" &'
+
+EOF
+
+echo "in terminal '1' and enter to start the bucklespring manually, and to stop 'pkill buckle'"
+
+```
+
+
+
 
 
 
