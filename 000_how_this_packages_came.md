@@ -222,3 +222,14 @@ Now i will install those dependencies and then use `installation_script.sh` and 
 
 
 
+### sudo apt install xfce4-screensaver
+
+```
+sudo apt-get install --print-uris --yes xfce4-screensaver | grep ^\' | cut -d\' -f2 > screensaver-urls.txt
+
+mkdir 10_dependencies_screensaver
+cd 10_dependencies_screensaver
+
+wget -i ../screensaver-urls.txt
+```
+
