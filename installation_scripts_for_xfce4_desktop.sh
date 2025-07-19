@@ -68,6 +68,7 @@ cp -rv files_and_folders/scripts_for_shortcuts/ ~/.apps_and_softwares/
 ./files_and_folders/terminal_alias_for_redshift.sh
 ./files_and_folders/terminal_alias_for_bucklespring.sh
 
+# Build buckle will chage my working directory so i think to run it at last for now.
 ./files_and_folders/build_bucklespring_from_source.sh 
 
 
